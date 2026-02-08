@@ -1,68 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$BAGZ Whitepaper</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$BAGZ Whitepaper • Built Different</title>
+  <meta name="description" content="$BAGZ is a community-driven Solana token built in Akron, Ohio. Utilities: staking, monthly burns, NFTs, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">🦝</div>
+        <div>
+          <div class="brand-kicker">Built Different • Akron to Web3</div>
+          <div class="brand-title">$BAGZ Whitepaper</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#utilities">Utilities</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a class="btn btn-outline" href="https://bagz-web.vercel.app" target="_blank" rel="noreferrer">Official Site ↗</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="hero">
-  <h1>$BAGZ Whitepaper</h1>
-  <p>Built Different — From Akron to Web3</p>
-  <a href="https://bagz-web.vercel.app" class="btn">Official Website</a>
-</header>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="pill">Solana • USDC Paired • Community-Driven</div>
+          <h1>$BAGZ Whitepaper <span class="grad">— Built Different.</span></h1>
+          <p class="lead">
+            $BAGZ is a community-driven token built in Akron, Ohio—focused on utility, transparency,
+            and steady long-term growth (not hype).
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#toc">Read Whitepaper</a>
+            <a class="btn btn-ghost" href="#howtobuy">How to Buy</a>
+          </div>
 
-<section>
-<h2>Introduction</h2>
-<p>$BAGZ is a community‑driven cryptocurrency project built in Akron, Ohio. Our goal is long‑term ecosystem growth through real utility, transparency, and steady development.</p>
-</section>
+          <div class="facts">
+            <div class="fact">
+              <div class="fact-label">Token</div>
+              <div class="fact-value">$BAGZ (BAZ)</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Chain</div>
+              <div class="fact-value">Solana</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Primary Pair</div>
+              <div class="fact-value">USDC</div>
+            </div>
+          </div>
+        </div>
 
-<section>
-<h2>Mission</h2>
-<p>To create a fun, sustainable token economy powered by staking, monthly burns, NFTs, and community participation.</p>
-</section>
+        <div class="hero-card">
+          <div class="card-head">
+            <div class="card-title">Contract Address (CA)</div>
+            <button class="btn btn-outline btn-sm" id="copyBtn" type="button">Copy</button>
+          </div>
+          <div class="code" id="ca">B6Gu68Jr1TQxgapgA6H66SGQtsBBtpjafq8iXFBsmoon</div>
+          <div class="note">Always verify the CA before buying.</div>
 
-<section>
-<h2>Core Utilities</h2>
-<ul>
-<li><strong>Staking:</strong> Earn rewards by supporting the ecosystem.</li>
-<li><strong>Monthly Burns:</strong> Supply reduction through scheduled burns.</li>
-<li><strong>NFT Ecosystem:</strong> Utility NFTs tied to $BAGZ perks.</li>
-<li><strong>Community Driven:</strong> Transparent updates and growth focus.</li>
-</ul>
-</section>
+          <div class="divider"></div>
 
-<section>
-<h2>Tokenomics</h2>
-<p>Supply mechanics, burn structure, staking incentives, and ecosystem funding designed for long‑term sustainability.</p>
-</section>
+          <div class="checks">
+            <div class="check">✅ Staking utility</div>
+            <div class="check">✅ Monthly burns</div>
+            <div class="check">✅ NFT ecosystem</div>
+            <div class="check">✅ USDC paired for reduced external volatility</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>Liquidity & Pairing</h2>
-<p>$BAGZ is paired with USDC, helping reduce external volatility while still allowing price movement based on buy/sell activity.</p>
-</section>
+    <section class="wrap section" id="toc">
+      <h2>Contents</h2>
+      <p class="sub">Jump to any section.</p>
+      <div class="toc">
+        <a href="#intro">1. Introduction</a>
+        <a href="#mission">2. Mission & Vision</a>
+        <a href="#utilities">3. Utilities</a>
+        <a href="#pairing">4. USDC Pairing & Volatility</a>
+        <a href="#tokenomics">5. Tokenomics</a>
+        <a href="#burns">6. Monthly Burns</a>
+        <a href="#staking">7. Staking</a>
+        <a href="#nfts">8. NFTs</a>
+        <a href="#roadmap">9. Roadmap</a>
+        <a href="#security">10. Transparency</a>
+        <a href="#disclaimer">11. Risk Disclaimer</a>
+      </div>
+    </section>
 
-<section>
-<h2>Roadmap</h2>
-<ul>
-<li>Community growth</li>
-<li>Staking improvements</li>
-<li>Monthly burn events</li>
-<li>NFT expansion</li>
-<li>DAO governance</li>
-</ul>
-</section>
+    <section class="wrap paper">
+      <article class="card" id="intro">
+        <h3>1) Introduction</h3>
+        <p>
+          <strong>$BAGZ</strong> is a Solana-based community token inspired by humor, culture, and Akron pride.
+          We focus on building real utility—staking, burns, NFTs, and future tools—while keeping communication transparent.
+        </p>
+      </article>
 
-<section>
-<h2>Disclaimer</h2>
-<p>Crypto assets are volatile. This document is informational and not financial advice. Always do your own research.</p>
-</section>
+      <article class="card" id="mission">
+        <h3>2) Mission & Vision</h3>
+        <div class="two-col">
+          <div>
+            <h4>Mission</h4>
+            <p>Build a fun, sustainable token economy that rewards long-term community participation.</p>
+          </div>
+          <div>
+            <h4>Vision</h4>
+            <p>A self-sustaining ecosystem where utilities and revenue mechanics reinforce long-term growth.</p>
+          </div>
+        </div>
+      </article>
 
-<footer>
-<p>© $BAGZ — Built Different</p>
-</footer>
+      <article class="card" id="utilities">
+        <h3>3) Utilities</h3>
+        <div class="util-grid">
+          <div class="util">
+            <img src="assets/icon-staking.svg" alt="" />
+            <div>
+              <div class="util-title">Staking</div>
+              <div class="muted">Earn rewards for supporting the ecosystem long-term.</div>
+            </div>
+          </div>
+          <div class="util">
+            <img src="assets/icon-burns.svg" alt="" />
+            <div>
+              <div class="util-title">Monthly Burns</div>
+              <div class="muted">Supply reduced once per month through scheduled burn events.</div>
+            </div>
+          </div>
+          <div class="util">
+            <img src="assets/icon-nft.svg" alt="" />
+            <div>
+              <div class="util-title">NFT Ecosystem</div>
+              <div class="muted">NFT perks: roles, whitelist, multipliers, and future utilities.</div>
+            </div>
+          </div>
+          <div class="util">
+            <img src="assets/icon-usdc.svg" alt="" />
+            <div>
+              <div class="util-title">USDC Pairing</div>
+              <div class="muted">Paired for reduced external volatility compared to volatile base assets.</div>
+            </div>
+          </div>
+        </div>
+      </article>
 
+      <article class="card" id="pairing">
+        <h3>4) USDC Pairing & Volatility</h3>
+        <p>
+          $BAGZ is paired with <strong>USDC</strong> to reduce external volatility from base-asset swings.
+          Price can still move up or down based on buys/sells and liquidity depth—USDC pairing helps keep the
+          reference currency stable while the market discovers price.
+        </p>
+      </article>
+
+      <article class="card" id="tokenomics">
+        <h3>5) Tokenomics</h3>
+        <p class="muted">
+          Add your finalized supply, allocations, and lock schedule here. This page includes a clean template graphic you can replace later.
+        </p>
+        <div class="media">
+          <img src="assets/tokenomics-template.svg" alt="Tokenomics template graphic" />
+        </div>
+        <div class="callout">
+          <strong>Note:</strong> Your whitepaper should clearly describe any locked tokens and future lock plans.
+        </div>
+      </article>
+
+      <article class="card" id="burns">
+        <h3>6) Monthly Burns</h3>
+        <p>
+          Burns happen <strong>monthly</strong>. A portion of ecosystem revenue can be used for buybacks and burns to reduce supply over time.
+        </p>
+        <ul>
+          <li><strong>Buybacks & burns:</strong> 30% of monthly NFT + merchandise revenue is allocated to buybacks and burns.</li>
+          <li><strong>Proof:</strong> Burn transactions should be shared publicly so the community can verify.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="staking">
+        <h3>7) Staking</h3>
+        <p>
+          Staking rewards long-term holders and supports stability by encouraging participation and reducing short-term sell pressure.
+          Staking terms can evolve over time with sustainable reward funding.
+        </p>
+      </article>
+
+      <article class="card" id="nfts">
+        <h3>8) NFTs</h3>
+        <p>
+          NFTs are designed to add utility and community value—such as early staking access, staking multipliers, VIP roles,
+          whitelist spots for future drops, and governance influence.
+        </p>
+      </article>
+
+      <article class="card" id="roadmap">
+        <h3>9) Roadmap</h3>
+        <div class="media">
+          <img src="assets/diagram-ecosystem.svg" alt="Ecosystem loop diagram" />
+        </div>
+        <ol class="roadmap">
+          <li><strong>Community Growth:</strong> Expand holders, channels, and partnerships.</li>
+          <li><strong>Utility Expansion:</strong> Improve staking experience and add new tools.</li>
+          <li><strong>Monthly Burns:</strong> Consistent monthly burn schedule and proof.</li>
+          <li><strong>NFT Drops:</strong> Utility-focused NFT collections with perks.</li>
+          <li><strong>Governance:</strong> DAO/community voting and structured decision making.</li>
+        </ol>
+      </article>
+
+      <article class="card" id="security">
+        <h3>10) Transparency</h3>
+        <p class="muted">
+          Add your LP lock details, public wallets (if applicable), and where official updates are posted.
+          Transparency builds long-term trust.
+        </p>
+      </article>
+
+      <article class="card" id="disclaimer">
+        <h3>11) Risk Disclaimer</h3>
+        <p>
+          Crypto assets can be volatile and may lose value. This document is for informational purposes and is not financial advice.
+          Always do your own research (DYOR).
+        </p>
+      </article>
+    </section>
+
+    <section class="wrap section" id="howtobuy">
+      <h2>How to Buy</h2>
+      <p class="sub">Simple steps for new buyers.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <div class="step-title">Get a Solana wallet</div>
+            <div class="muted">Install Phantom and fund it with SOL for network fees.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <div class="step-title">Swap USDC → $BAGZ</div>
+            <div class="muted">Use your preferred Solana DEX to swap into $BAGZ.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <div class="step-title">Verify the CA</div>
+            <div class="muted">Match the contract address above before buying.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-cta">
+        <a class="btn btn-primary" href="https://bagz-web.vercel.app" target="_blank" rel="noreferrer">Go to Official Website ↗</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <div class="footer-title">$BAGZ • Built Different</div>
+          <div class="muted">Official website: <a href="https://bagz-web.vercel.app" target="_blank" rel="noreferrer">bagz-web.vercel.app</a></div>
+        </div>
+        <div class="muted">DYOR • Not financial advice</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const ca = document.getElementById('ca')?.innerText?.trim();
+    copyBtn?.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(ca);
+        copyBtn.textContent = "Copied ✅";
+        setTimeout(()=>copyBtn.textContent="Copy", 1200);
+      }catch(e){
+        copyBtn.textContent = "Copy failed";
+        setTimeout(()=>copyBtn.textContent="Copy", 1200);
+      }
+    });
+  </script>
 </body>
 </html>

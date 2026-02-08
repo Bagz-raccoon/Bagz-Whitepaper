@@ -4,20 +4,119 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$BAGZ Whitepaper • Built Different</title>
-  <meta name="description" content="$BAGZ is a community-driven Solana token built in Akron, Ohio. Utilities: staking, monthly burns, NFTs, and more." />
+  <meta name="description" content="Official $BAGZ whitepaper — clean, professional, and visual. Utilities, burns, staking, NFTs, and roadmap." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    :root{
+      --bg:#070A12; --text:#EEF0F7; --muted:#A7ADC0; --line:rgba(255,255,255,.12);
+      --accent:#00FF99; --accent2:#6A00FF; --radius:18px;
+      --shadow:0 18px 55px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNjAwJyBoZWlnaHQ9JzkwMCcgdmlld0JveD0nMCAwIDE2MDAgOTAwJz4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0nZycgeDE9JzAnIHkxPScwJyB4Mj0nMScgeTI9JzEnPgogICAgICA8c3RvcCBvZmZzZXQ9JzAnIHN0b3AtY29sb3I9JyMwQjEyMjAnLz4KICAgICAgPHN0b3Agb2Zmc2V0PScwLjYnIHN0b3AtY29sb3I9JyMwNzBBMTInLz4KICAgICAgPHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDUwNjBCJy8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSdyMScgY3g9JzI1JScgY3k9JzIwJScgcj0nNzAlJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjMDBGRjk5JyBzdG9wLW9wYWNpdHk9JzAuMjInLz4KICAgICAgPHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDBGRjk5JyBzdG9wLW9wYWNpdHk9JzAnLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9J3IyJyBjeD0nNzglJyBjeT0nMTglJyByPSc2NSUnPgogICAgICA8c3RvcCBvZmZzZXQ9JzAnIHN0b3AtY29sb3I9JyM2QTAwRkYnIHN0b3Atb3BhY2l0eT0nMC4yMCcvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEnIHN0b3AtY29sb3I9JyM2QTAwRkYnIHN0b3Atb3BhY2l0eT0nMCcvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxwYXR0ZXJuIGlkPSdncmlkJyB3aWR0aD0nNDQnIGhlaWdodD0nNDQnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnPgogICAgICA8cGF0aCBkPSdNNDQgMEgwVjQ0JyBmaWxsPSdub25lJyBzdHJva2U9JyNGRkZGRkYnIHN0cm9rZS1vcGFjaXR5PScwLjA3JyBzdHJva2Utd2lkdGg9JzEnLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9JzE2MDAnIGhlaWdodD0nOTAwJyBmaWxsPSd1cmwoI2cpJy8+CiAgPHJlY3Qgd2lkdGg9JzE2MDAnIGhlaWdodD0nOTAwJyBmaWxsPSd1cmwoI2dyaWQpJy8+CiAgPHJlY3Qgd2lkdGg9JzE2MDAnIGhlaWdodD0nOTAwJyBmaWxsPSd1cmwoI3IxKScvPgogIDxyZWN0IHdpZHRoPScxNjAwJyBoZWlnaHQ9JzkwMCcgZmlsbD0ndXJsKCNyMiknLz4KICA8ZyBvcGFjaXR5PScwLjEwJz4KICAgIDx0ZXh0IHg9JzgwMCcgeT0nNTIwJyBmb250LWZhbWlseT0nSW50ZXIsIEFyaWFsJyBmb250LXNpemU9JzE2MCcgZm9udC13ZWlnaHQ9JzkwMCcgZmlsbD0nI0ZGRkZGRicgdGV4dC1hbmNob3I9J21pZGRsZSc+JEJBR1o8L3RleHQ+CiAgICA8dGV4dCB4PSc4MDAnIHk9JzYxMCcgZm9udC1mYW1pbHk9J0ludGVyLCBBcmlhbCcgZm9udC1zaXplPSc0NCcgZm9udC13ZWlnaHQ9JzcwMCcgZmlsbD0nI0ZGRkZGRicgdGV4dC1hbmNob3I9J21pZGRsZSc+QlVJTFQgRElGRkVSRU5UPC90ZXh0PgogIDwvZz4KPC9zdmc+");
+      background-size: cover; background-attachment: fixed; background-position:center;
+    }
+    a{color:inherit}
+    .wrap{width:min(1120px,92vw); margin:0 auto}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .mark{width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(0,255,153,.16), rgba(106,0,255,.16)); border:1px solid var(--line);}
+    .kicker{font-size:12px; color:var(--muted); font-weight:700}
+    .title{font-weight:900}
+    .nav{display:flex; gap:14px; align-items:center}
+    .nav a{text-decoration:none; color:var(--muted); font-weight:800; font-size:14px}
+    .nav a:hover{color:var(--text)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; border-radius:12px;
+      border:1px solid transparent; font-weight:900; text-decoration:none; letter-spacing:.2px}
+    .btn-primary{color:#06130c; background: linear-gradient(135deg, var(--accent), rgba(0,255,153,.72));
+      box-shadow:0 18px 45px rgba(0,255,153,.18);}
+    .btn-outline{color:var(--text); background: rgba(255,255,255,.04); border-color: var(--line);}
+    .btn-sm{padding:8px 10px; border-radius:10px; font-size:12px}
+
+    .hero{padding:52px 0 22px;}
+    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; align-items:start}
+    .pill{display:inline-flex; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.18); color:var(--muted); font-weight:800; font-size:13px;}
+    h1{margin:14px 0 10px; font-size:clamp(34px,4vw,54px); letter-spacing:-.7px; line-height:1.05;}
+    .grad{background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .lead{margin:0; color:var(--muted); line-height:1.65; max-width:60ch;}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 14px;}
+    .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px;}
+    .fact{border:1px solid var(--line); border-radius:var(--radius); background: rgba(0,0,0,.18); padding:12px;}
+    .fact-label{font-size:12px; color:var(--muted); font-weight:800}
+    .fact-value{margin-top:6px; font-weight:1000}
+
+    .card{border:1px solid var(--line); border-radius:var(--radius); background: rgba(0,0,0,.22); padding:18px; box-shadow:var(--shadow);}
+    .card h3{margin:0 0 10px; font-size:20px}
+    .card h4{margin:0 0 6px; font-size:15px}
+    .card p, .card li{color:var(--muted); line-height:1.75}
+    .card strong{color:var(--text)}
+    .divider{height:1px; background: rgba(255,255,255,.10); margin:14px 0}
+    .code{margin-top:10px; padding:12px; border-radius:14px; border:1px dashed rgba(255,255,255,.22);
+      background: rgba(0,0,0,.25); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12.5px; color:#D9DEF0; word-break:break-all;}
+    .note{margin-top:8px; font-size:12px; color:var(--muted)}
+    .checks{display:grid; gap:8px; color:var(--muted); font-weight:800; font-size:13px}
+
+    .section{padding:26px 0 10px}
+    .section h2{margin:0; font-size:26px}
+    .sub{margin:8px 0 0; color:var(--muted)}
+    .toc{margin-top:14px; display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
+    .toc a{padding:12px 14px; border:1px solid var(--line); border-radius:14px; text-decoration:none;
+      color:var(--muted); font-weight:900; background: rgba(0,0,0,.18);}
+    .toc a:hover{color:var(--text); border-color:rgba(255,255,255,.22)}
+
+    .paper{padding:6px 0 0}
+    .two-col{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+
+    .util-grid{margin-top:10px; display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .util{display:flex; gap:12px; align-items:flex-start; border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18); border-radius:14px; padding:12px}
+    .icon{width:46px; height:46px; border-radius:14px; display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(0,255,153,.12), rgba(106,0,255,.12)); border:1px solid rgba(255,255,255,.12);}
+    .util-title{font-weight:1000}
+
+    .steps{margin-top:14px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .step{display:flex; gap:12px; align-items:flex-start; border:1px solid var(--line);
+      background: rgba(0,0,0,.18); border-radius:var(--radius); padding:16px}
+    .num{width:34px; height:34px; border-radius:12px; display:grid; place-items:center;
+      background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); font-weight:1000}
+    .step-title{font-weight:1000}
+
+    .footer{margin:30px 0 44px; padding:18px 0; border-top:1px solid rgba(255,255,255,.10);}
+    .footer-inner{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+    .footer-title{font-weight:1000}
+
+    @media (max-width: 920px){
+      .nav{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .facts{grid-template-columns:1fr}
+      .toc{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .util-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <div class="brand">
-        <div class="brand-mark">🦝</div>
+        <div class="mark">🦝</div>
         <div>
-          <div class="brand-kicker">Built Different • Akron to Web3</div>
-          <div class="brand-title">$BAGZ Whitepaper</div>
+          <div class="kicker">Built Different • Akron to Web3</div>
+          <div class="title">$BAGZ Whitepaper</div>
         </div>
       </div>
       <nav class="nav">
@@ -32,9 +131,8 @@
 
   <main>
     <section class="hero" id="top">
-      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
-        <div class="hero-copy">
+        <div>
           <div class="pill">Solana • USDC Paired • Community-Driven</div>
           <h1>$BAGZ Whitepaper <span class="grad">— Built Different.</span></h1>
           <p class="lead">
@@ -43,40 +141,28 @@
           </p>
           <div class="cta">
             <a class="btn btn-primary" href="#toc">Read Whitepaper</a>
-            <a class="btn btn-ghost" href="#howtobuy">How to Buy</a>
+            <a class="btn btn-outline" href="#howtobuy">How to Buy</a>
           </div>
-
           <div class="facts">
-            <div class="fact">
-              <div class="fact-label">Token</div>
-              <div class="fact-value">$BAGZ (BAZ)</div>
-            </div>
-            <div class="fact">
-              <div class="fact-label">Chain</div>
-              <div class="fact-value">Solana</div>
-            </div>
-            <div class="fact">
-              <div class="fact-label">Primary Pair</div>
-              <div class="fact-value">USDC</div>
-            </div>
+            <div class="fact"><div class="fact-label">Token</div><div class="fact-value">$BAGZ (BAZ)</div></div>
+            <div class="fact"><div class="fact-label">Chain</div><div class="fact-value">Solana</div></div>
+            <div class="fact"><div class="fact-label">Primary Pair</div><div class="fact-value">USDC</div></div>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="card-head">
-            <div class="card-title">Contract Address (CA)</div>
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+            <div style="font-weight:1000;">Contract Address (CA)</div>
             <button class="btn btn-outline btn-sm" id="copyBtn" type="button">Copy</button>
           </div>
           <div class="code" id="ca">B6Gu68Jr1TQxgapgA6H66SGQtsBBtpjafq8iXFBsmoon</div>
           <div class="note">Always verify the CA before buying.</div>
-
           <div class="divider"></div>
-
           <div class="checks">
-            <div class="check">✅ Staking utility</div>
-            <div class="check">✅ Monthly burns</div>
-            <div class="check">✅ NFT ecosystem</div>
-            <div class="check">✅ USDC paired for reduced external volatility</div>
+            <div>✅ Staking utility</div>
+            <div>✅ Monthly burns</div>
+            <div>✅ NFT ecosystem</div>
+            <div>✅ USDC paired for reduced external volatility</div>
           </div>
         </div>
       </div>
@@ -103,10 +189,7 @@
     <section class="wrap paper">
       <article class="card" id="intro">
         <h3>1) Introduction</h3>
-        <p>
-          <strong>$BAGZ</strong> is a Solana-based community token inspired by humor, culture, and Akron pride.
-          We focus on building real utility—staking, burns, NFTs, and future tools—while keeping communication transparent.
-        </p>
+        <p><strong>$BAGZ</strong> is a Solana-based community token inspired by Akron pride, humor, and real utility. We focus on staking, monthly burns, NFTs, and future tools—while keeping communication transparent.</p>
       </article>
 
       <article class="card" id="mission">
@@ -126,114 +209,61 @@
       <article class="card" id="utilities">
         <h3>3) Utilities</h3>
         <div class="util-grid">
-          <div class="util">
-            <img src="assets/icon-staking.svg" alt="" />
-            <div>
-              <div class="util-title">Staking</div>
-              <div class="muted">Earn rewards for supporting the ecosystem long-term.</div>
-            </div>
-          </div>
-          <div class="util">
-            <img src="assets/icon-burns.svg" alt="" />
-            <div>
-              <div class="util-title">Monthly Burns</div>
-              <div class="muted">Supply reduced once per month through scheduled burn events.</div>
-            </div>
-          </div>
-          <div class="util">
-            <img src="assets/icon-nft.svg" alt="" />
-            <div>
-              <div class="util-title">NFT Ecosystem</div>
-              <div class="muted">NFT perks: roles, whitelist, multipliers, and future utilities.</div>
-            </div>
-          </div>
-          <div class="util">
-            <img src="assets/icon-usdc.svg" alt="" />
-            <div>
-              <div class="util-title">USDC Pairing</div>
-              <div class="muted">Paired for reduced external volatility compared to volatile base assets.</div>
-            </div>
-          </div>
+          <div class="util"><div class="icon">📈</div><div><div class="util-title">Staking</div><div class="muted">Earn rewards for long-term support.</div></div></div>
+          <div class="util"><div class="icon">🔥</div><div><div class="util-title">Monthly Burns</div><div class="muted">Supply reduced once per month.</div></div></div>
+          <div class="util"><div class="icon">🖼️</div><div><div class="util-title">NFT Ecosystem</div><div class="muted">Perks, roles, whitelist, multipliers.</div></div></div>
+          <div class="util"><div class="icon">🪙</div><div><div class="util-title">USDC Pairing</div><div class="muted">Reduced external volatility vs. volatile base assets.</div></div></div>
         </div>
       </article>
 
       <article class="card" id="pairing">
         <h3>4) USDC Pairing & Volatility</h3>
-        <p>
-          $BAGZ is paired with <strong>USDC</strong> to reduce external volatility from base-asset swings.
-          Price can still move up or down based on buys/sells and liquidity depth—USDC pairing helps keep the
-          reference currency stable while the market discovers price.
-        </p>
+        <p>$BAGZ is paired with <strong>USDC</strong> to reduce external volatility from base-asset swings. Price can still move up or down based on buys/sells and liquidity depth—USDC pairing keeps the reference currency stable while the market discovers price.</p>
       </article>
 
       <article class="card" id="tokenomics">
         <h3>5) Tokenomics</h3>
-        <p class="muted">
-          Add your finalized supply, allocations, and lock schedule here. This page includes a clean template graphic you can replace later.
-        </p>
-        <div class="media">
-          <img src="assets/tokenomics-template.svg" alt="Tokenomics template graphic" />
-        </div>
-        <div class="callout">
-          <strong>Note:</strong> Your whitepaper should clearly describe any locked tokens and future lock plans.
-        </div>
+        <p class="muted">Paste your finalized tokenomics here (supply, allocations, locks). Include locked tokens and future lock plans.</p>
       </article>
 
       <article class="card" id="burns">
         <h3>6) Monthly Burns</h3>
-        <p>
-          Burns happen <strong>monthly</strong>. A portion of ecosystem revenue can be used for buybacks and burns to reduce supply over time.
-        </p>
+        <p>Burns happen <strong>monthly</strong>. A portion of ecosystem revenue can be used for buybacks and burns to reduce supply over time.</p>
         <ul>
-          <li><strong>Buybacks & burns:</strong> 30% of monthly NFT + merchandise revenue is allocated to buybacks and burns.</li>
-          <li><strong>Proof:</strong> Burn transactions should be shared publicly so the community can verify.</li>
+          <li><strong>Buybacks & burns:</strong> 30% of monthly NFT + merchandise revenue allocated to buybacks and burns.</li>
+          <li><strong>Proof:</strong> Burn transactions posted publicly for verification.</li>
         </ul>
       </article>
 
       <article class="card" id="staking">
         <h3>7) Staking</h3>
-        <p>
-          Staking rewards long-term holders and supports stability by encouraging participation and reducing short-term sell pressure.
-          Staking terms can evolve over time with sustainable reward funding.
-        </p>
+        <p>Staking rewards long-term holders and supports stability by encouraging participation and reducing short-term sell pressure.</p>
       </article>
 
       <article class="card" id="nfts">
         <h3>8) NFTs</h3>
-        <p>
-          NFTs are designed to add utility and community value—such as early staking access, staking multipliers, VIP roles,
-          whitelist spots for future drops, and governance influence.
-        </p>
+        <p>NFTs add utility: early staking access, staking multipliers, VIP roles, whitelist perks, and governance influence.</p>
       </article>
 
       <article class="card" id="roadmap">
         <h3>9) Roadmap</h3>
-        <div class="media">
-          <img src="assets/diagram-ecosystem.svg" alt="Ecosystem loop diagram" />
-        </div>
-        <ol class="roadmap">
-          <li><strong>Community Growth:</strong> Expand holders, channels, and partnerships.</li>
-          <li><strong>Utility Expansion:</strong> Improve staking experience and add new tools.</li>
-          <li><strong>Monthly Burns:</strong> Consistent monthly burn schedule and proof.</li>
-          <li><strong>NFT Drops:</strong> Utility-focused NFT collections with perks.</li>
-          <li><strong>Governance:</strong> DAO/community voting and structured decision making.</li>
+        <ol>
+          <li><strong>Community Growth</strong> — expand holders, channels, partnerships</li>
+          <li><strong>Utility Expansion</strong> — improve staking UX + add tools</li>
+          <li><strong>Monthly Burns</strong> — consistent schedule + proof</li>
+          <li><strong>NFT Drops</strong> — utility-focused collections</li>
+          <li><strong>Governance</strong> — DAO/community voting structure</li>
         </ol>
       </article>
 
       <article class="card" id="security">
         <h3>10) Transparency</h3>
-        <p class="muted">
-          Add your LP lock details, public wallets (if applicable), and where official updates are posted.
-          Transparency builds long-term trust.
-        </p>
+        <p class="muted">Add LP lock details, public wallets (if applicable), and where official updates are posted. Transparency builds long-term trust.</p>
       </article>
 
       <article class="card" id="disclaimer">
         <h3>11) Risk Disclaimer</h3>
-        <p>
-          Crypto assets can be volatile and may lose value. This document is for informational purposes and is not financial advice.
-          Always do your own research (DYOR).
-        </p>
+        <p>Crypto assets can be volatile and may lose value. This document is for informational purposes and is not financial advice. Always DYOR.</p>
       </article>
     </section>
 
@@ -241,30 +271,11 @@
       <h2>How to Buy</h2>
       <p class="sub">Simple steps for new buyers.</p>
       <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <div>
-            <div class="step-title">Get a Solana wallet</div>
-            <div class="muted">Install Phantom and fund it with SOL for network fees.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <div>
-            <div class="step-title">Swap USDC → $BAGZ</div>
-            <div class="muted">Use your preferred Solana DEX to swap into $BAGZ.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <div>
-            <div class="step-title">Verify the CA</div>
-            <div class="muted">Match the contract address above before buying.</div>
-          </div>
-        </div>
+        <div class="step"><div class="num">1</div><div><div class="step-title">Get Phantom</div><div class="muted">Install Phantom wallet and fund with SOL for fees.</div></div></div>
+        <div class="step"><div class="num">2</div><div><div class="step-title">Swap USDC → $BAGZ</div><div class="muted">Use a Solana DEX to swap into $BAGZ.</div></div></div>
+        <div class="step"><div class="num">3</div><div><div class="step-title">Verify CA</div><div class="muted">Match the contract address above before buying.</div></div></div>
       </div>
-
-      <div class="footer-cta">
+      <div style="margin-top:16px;">
         <a class="btn btn-primary" href="https://bagz-web.vercel.app" target="_blank" rel="noreferrer">Go to Official Website ↗</a>
       </div>
     </section>
@@ -278,7 +289,6 @@
         <div class="muted">DYOR • Not financial advice</div>
       </div>
     </footer>
-
   </main>
 
   <script>

@@ -1,395 +1,44 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>$BAGZ Whitepaper • Built Different</title>
-  <meta name="description" content="$BAGZ is a community-driven Solana token built in Akron, Ohio. Utilities: staking, monthly burns, merch, music brand content, and more." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --text:#EEF0F7; --muted:#A7ADC0; --line:rgba(255,255,255,.12);
-      --accent:#00FF99; --accent2:#6A00FF; --radius:18px;
-      --shadow:0 18px 55px rgba(0,0,0,.45);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAwJyBoZWlnaHQ9JzEwMDAnIHZpZXdCb3g9JzAgMCAxODAwIDEwMDAnPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSdnJyB4MT0nMCcgeTE9JzAnIHgyPScxJyB5Mj0nMSc+CiAgICAgIDxzdG9wIG9mZnNldD0nMCcgc3RvcC1jb2xvcj0nIzBCMTIyMCcvPgogICAgICA8c3RvcCBvZmZzZXQ9JzAuNTgnIHN0b3AtY29sb3I9JyMwNzBBMTInLz4KICAgICAgPHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDUwNjBCJy8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSdyMScgY3g9JzIyJScgY3k9JzE4JScgcj0nNzAlJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjMDBGRjk5JyBzdG9wLW9wYWNpdHk9JzAuMjInLz4KICAgICAgPHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDBGRjk5JyBzdG9wLW9wYWNpdHk9JzAnLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9J3IyJyBjeD0nNzglJyBjeT0nMTYlJyByPSc2NSUnPgogICAgICA8c3RvcCBvZmZzZXQ9JzAnIHN0b3AtY29sb3I9JyM2QTAwRkYnIHN0b3Atb3BhY2l0eT0nMC4yMCcvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEnIHN0b3AtY29sb3I9JyM2QTAwRkYnIHN0b3Atb3BhY2l0eT0nMCcvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxwYXR0ZXJuIGlkPSdncmlkJyB3aWR0aD0nNDYnIGhlaWdodD0nNDYnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnPgogICAgICA8cGF0aCBkPSdNNDYgMEgwVjQ2JyBmaWxsPSdub25lJyBzdHJva2U9JyNGRkZGRkYnIHN0cm9rZS1vcGFjaXR5PScwLjA3JyBzdHJva2Utd2lkdGg9JzEnLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9JzE4MDAnIGhlaWdodD0nMTAwMCcgZmlsbD0ndXJsKCNnKScvPgogIDxyZWN0IHdpZHRoPScxODAwJyBoZWlnaHQ9JzEwMDAnIGZpbGw9J3VybCgjZ3JpZCknLz4KICA8cmVjdCB3aWR0aD0nMTgwMCcgaGVpZ2h0PScxMDAwJyBmaWxsPSd1cmwoI3IxKScvPgogIDxyZWN0IHdpZHRoPScxODAwJyBoZWlnaHQ9JzEwMDAnIGZpbGw9J3VybCgjcjIpJy8+CiAgPGcgb3BhY2l0eT0nMC4xMCc+CiAgICA8dGV4dCB4PSc5MDAnIHk9JzU2MCcgZm9udC1mYW1pbHk9J0ludGVyLCBBcmlhbCcgZm9udC1zaXplPScxNzAnIGZvbnQtd2VpZ2h0PSc5MDAnIGZpbGw9JyNGRkZGRkYnIHRleHQtYW5jaG9yPSdtaWRkbGUnPiRCQUdaPC90ZXh0PgogICAgPHRleHQgeD0nOTAwJyB5PSc2NTUnIGZvbnQtZmFtaWx5PSdJbnRlciwgQXJpYWwnIGZvbnQtc2l6ZT0nNDgnIGZvbnQtd2VpZ2h0PSc4MDAnIGZpbGw9JyNGRkZGRkYnIHRleHQtYW5jaG9yPSdtaWRkbGUnPkJVSUxUIERJRkZFUkVOVDwvdGV4dD4KICA8L2c+Cjwvc3ZnPg==");
-      background-size:cover;
-      background-attachment:fixed;
-      background-position:center;
-    }
-    a{color:inherit}
-    .wrap{width:min(1120px,92vw); margin:0 auto}
-    .topbar{
-      position:sticky; top:0; z-index:20;
-      backdrop-filter: blur(10px);
-      background: rgba(7,10,18,.65);
-      border-bottom: 1px solid var(--line);
-    }
-    .topbar-inner{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:14px 0}
-    .brand{display:flex; gap:12px; align-items:center}
-    .mark{width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(0,255,153,.16), rgba(106,0,255,.16)); border:1px solid var(--line);}
-    .kicker{font-size:12px; color:var(--muted); font-weight:700}
-    .title{font-weight:900}
-    .nav{display:flex; gap:14px; align-items:center}
-    .nav a{text-decoration:none; color:var(--muted); font-weight:800; font-size:14px}
-    .nav a:hover{color:var(--text)}
-
-    .btn{display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px; border-radius:12px; border:1px solid transparent;
-      font-weight:900; text-decoration:none; letter-spacing:.2px;
-      transition: transform .08s ease, border-color .2s ease, background .2s ease;
-    }
-    .btn:active{transform: translateY(1px)}
-    .btn-primary{color:#06130c; background: linear-gradient(135deg, var(--accent), rgba(0,255,153,.72));
-      box-shadow:0 18px 45px rgba(0,255,153,.18);}
-    .btn-outline{color:var(--text); background: rgba(255,255,255,.04); border-color: var(--line);}
-    .btn-sm{padding:8px 10px; border-radius:10px; font-size:12px}
-
-    .hero{padding:52px 0 22px}
-    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; align-items:start}
-    .pill{display:inline-flex; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.16);
-      background: rgba(0,0,0,.18); color:var(--muted); font-weight:800; font-size:13px;}
-    h1{margin:14px 0 10px; font-size:clamp(34px,4vw,54px); letter-spacing:-.7px; line-height:1.05;}
-    .grad{background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .lead{margin:0; color:var(--muted); line-height:1.65; max-width:65ch;}
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 14px;}
-    .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px;}
-    .fact{border:1px solid var(--line); border-radius:var(--radius); background: rgba(0,0,0,.18); padding:12px;}
-    .fact-label{font-size:12px; color:var(--muted); font-weight:800}
-    .fact-value{margin-top:6px; font-weight:1000}
-
-    .card{border:1px solid var(--line); border-radius:var(--radius); background: rgba(0,0,0,.22);
-      padding:18px; box-shadow:var(--shadow);}
-    .card h3{margin:0 0 10px; font-size:20px}
-    .card h4{margin:0 0 6px; font-size:15px}
-    .card p, .card li{color:var(--muted); line-height:1.75}
-    .card strong{color:var(--text)}
-    .divider{height:1px; background: rgba(255,255,255,.10); margin:14px 0}
-    .code{margin-top:10px; padding:12px; border-radius:14px; border:1px dashed rgba(255,255,255,.22);
-      background: rgba(0,0,0,.25); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size:12.5px; color:#D9DEF0; word-break:break-all;}
-    .note{margin-top:8px; font-size:12px; color:var(--muted)}
-    .checks{display:grid; gap:8px; color:var(--muted); font-weight:800; font-size:13px}
-
-    .section{padding:26px 0 10px}
-    .section h2{margin:0; font-size:26px}
-    .sub{margin:8px 0 0; color:var(--muted)}
-    .toc{margin-top:14px; display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
-    .toc a{padding:12px 14px; border:1px solid var(--line); border-radius:14px; text-decoration:none;
-      color:var(--muted); font-weight:900; background: rgba(0,0,0,.18);}
-    .toc a:hover{color:var(--text); border-color:rgba(255,255,255,.22)}
-
-    .paper{padding:6px 0 0}
-    .two-col{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
-
-    .util-grid{margin-top:10px; display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
-    .util{display:flex; gap:12px; align-items:flex-start; border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18); border-radius:14px; padding:12px}
-    .icon{width:46px; height:46px; border-radius:14px; display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(0,255,153,.12), rgba(106,0,255,.12));
-      border:1px solid rgba(255,255,255,.12);}
-    .util-title{font-weight:1000}
-
-    .callout{margin-top:12px; padding:12px 14px; border-radius:14px;
-      border:1px solid rgba(0,255,153,.22); background: rgba(0,255,153,.06); color:var(--muted);}
-
-    .steps{margin-top:14px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-    .step{display:flex; gap:12px; align-items:flex-start; border:1px solid var(--line);
-      background: rgba(0,0,0,.18); border-radius:var(--radius); padding:16px}
-    .num{width:34px; height:34px; border-radius:12px; display:grid; place-items:center;
-      background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); font-weight:1000}
-    .step-title{font-weight:1000}
-
-    .footer{margin:30px 0 44px; padding:18px 0; border-top:1px solid rgba(255,255,255,.10);}
-    .footer-inner{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
-    .footer-title{font-weight:1000}
-
-    @media (max-width: 920px){
-      .nav{display:none}
-      .hero-grid{grid-template-columns:1fr}
-      .facts{grid-template-columns:1fr}
-      .toc{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
-      .util-grid{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
-    }
-  </style>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$BAGZ Whitepaper</title>
+<style>
+body{margin:0;font-family:Arial;color:#EEF0F7;background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAwJyBoZWlnaHQ9JzEwMDAnIHZpZXdCb3g9JzAgMCAxODAwIDEwMDAnPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSdnJyB4MT0nMCcgeTE9JzAnIHgyPScxJyB5Mj0nMSc+CiAgICAgIDxzdG9wIG9mZnNldD0nMCcgc3RvcC1jb2xvcj0nIzBCMTIyMCcvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEnIHN0b3AtY29sb3I9JyMwNTA2MEInLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPScxODAwJyBoZWlnaHQ9JzEwMDAnIGZpbGw9J3VybCgjZyknLz4KICA8dGV4dCB4PSc5MDAnIHk9JzU4MCcgZm9udC1mYW1pbHk9J0FyaWFsJyBmb250LXNpemU9JzE0MCcgZmlsbD0nd2hpdGUnIG9wYWNpdHk9JzAuMDgnIHRleHQtYW5jaG9yPSdtaWRkbGUnPiRCQUdaPC90ZXh0Pgo8L3N2Zz4=') center/cover fixed}
+.wrap{width:min(1100px,92vw);margin:auto}
+.card{background:rgba(0,0,0,.55);padding:20px;border-radius:16px;margin:20px 0}
+h1,h2,h3{margin:0 0 10px}
+a{color:#00FF99;font-weight:bold;text-decoration:none}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="brand">
-        <div class="mark">🦝</div>
-        <div>
-          <div class="kicker">Built Different • Akron to Web3</div>
-          <div class="title">$BAGZ Whitepaper</div>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#utilities">Utilities</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#burns">Burns</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#disclaimer">Disclaimer</a>
-        <a class="btn btn-outline" href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">$BAGZ App ↗</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="pill">Solana • USDC Paired • Community-Driven</div>
-          <h1>$BAGZ Whitepaper <span class="grad">— Built Different.</span></h1>
-          <p class="lead">
-            $BAGZ is a community-driven token built in <strong>Akron, Ohio</strong>—focused on utility, transparency,
-            and steady long-term growth (not hype). The official hub for ecosystem access is the <strong>$BAGZ App</strong>.
-          </p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#toc">Read Whitepaper</a>
-            <a class="btn btn-outline" href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">Open $BAGZ App ↗</a>
-          </div>
-          <div class="facts">
-            <div class="fact"><div class="fact-label">Token</div><div class="fact-value">$BAGZ (BAZ)</div></div>
-            <div class="fact"><div class="fact-label">Chain</div><div class="fact-value">Solana</div></div>
-            <div class="fact"><div class="fact-label">Primary Pair</div><div class="fact-value">USDC</div></div>
-          </div>
-        </div>
+<section class="wrap card">
+<h1>$BAGZ Whitepaper — Built Different</h1>
+<p>Official Hub: <a href="https://raccoonden.glide.page/dl/57b8f8" target="_blank">$BAGZ App ↗</a></p>
+</section>
 
-        <div class="card">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
-            <div style="font-weight:1000;">Contract Address (CA)</div>
-            <button class="btn btn-outline btn-sm" id="copyBtn" type="button">Copy</button>
-          </div>
-          <div class="code" id="ca">B6Gu68Jr1TQxgapgA6H66SGQtsBBtpjafq8iXFBsmoon</div>
-          <div class="note">Always verify the CA before buying.</div>
-          <div class="divider"></div>
-          <div class="checks">
-            <div>✅ Staking utility</div>
-            <div>✅ Monthly burns</div>
-            <div>✅ Merch + music brand layer</div>
-            <div>✅ USDC paired for reduced external volatility</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="wrap card">
+<h2>Community Burn Portal</h2>
+<p>
+$BAGZ includes a <strong>Community Burn Portal</strong>, allowing community members to voluntarily burn tokens.
+This mechanism empowers holders to directly participate in supply reduction and ecosystem support.
+</p>
+<ul>
+<li>Community-driven deflationary support</li>
+<li>Burn transactions verifiable on-chain</li>
+<li>Supports long-term sustainability model</li>
+</ul>
+</section>
 
-    <section class="wrap section" id="toc">
-      <h2>Contents</h2>
-      <p class="sub">Jump to any section.</p>
-      <div class="toc">
-        <a href="#intro">1. Introduction</a>
-        <a href="#mission">2. Mission & Vision</a>
-        <a href="#utilities">3. Utilities</a>
-        <a href="#pairing">4. USDC Pairing & Volatility</a>
-        <a href="#tokenomics">5. Tokenomics</a>
-        <a href="#burns">6. Monthly Burns & 30% Burn Funding</a>
-        <a href="#culture">7. Brand, Music & Merchandise</a>
-        <a href="#nfts">8. NFTs (Early Phase)</a>
-        <a href="#roadmap">9. Roadmap</a>
-        <a href="#security">10. Transparency</a>
-        <a href="#access">11. Official Access</a>
-        <a href="#disclaimer">12. Risk Disclaimer</a>
-      </div>
-    </section>
+<section class="wrap card">
+<h2>Monthly Burns & Funding</h2>
+<p>30% of funds from ecosystem activity contribute to buybacks and monthly burns.</p>
+</section>
 
-    <section class="wrap paper">
-      <article class="card" id="intro">
-        <h3>1) Introduction</h3>
-        <p>
-          <strong>$BAGZ</strong> is a community-driven digital asset built in <strong>Akron, Ohio</strong>, combining culture,
-          creativity, and real ecosystem mechanics. Unlike hype-driven tokens, $BAGZ focuses on long-term building through
-          staking, monthly burns, merchandise, music branding, and expanding utilities.
-        </p>
-        <p>
-          $BAGZ is designed as a <strong>Community-Driven Cultural Utility Token</strong>, where engagement and ecosystem growth
-          can support long-term sustainability.
-        </p>
-      </article>
+<section class="wrap card">
+<h2>Transparency</h2>
+<p>The $BAGZ App serves as the central hub for ecosystem tools, burn info, and updates.</p>
+</section>
 
-      <article class="card" id="mission">
-        <h3>2) Mission & Vision</h3>
-        <div class="two-col">
-          <div>
-            <h4>Mission</h4>
-            <p>
-              Build a sustainable crypto ecosystem powered by community participation, cultural identity, and utility mechanisms
-              that reward long-term supporters.
-            </p>
-          </div>
-          <div>
-            <h4>Vision</h4>
-            <p>
-              A self-sustaining ecosystem where community growth, music, merchandise, staking, and NFTs contribute to a cycle
-              of revenue, buybacks, and monthly token burns.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" id="utilities">
-        <h3>3) Utilities</h3>
-        <p class="muted">
-          Core utilities are designed to grow value through participation, culture, and long-term mechanics.
-        </p>
-        <div class="util-grid">
-          <div class="util"><div class="icon">📈</div><div><div class="util-title">Staking</div><div class="muted">Stake $BAGZ to earn rewards and support long-term strength.</div></div></div>
-          <div class="util"><div class="icon">🔥</div><div><div class="util-title">Monthly Burns</div><div class="muted">Supply reduction happens <strong>once per month</strong>.</div></div></div>
-          <div class="util"><div class="icon">👕</div><div><div class="util-title">Merchandise Ecosystem</div><div class="muted">Official merch supports ecosystem funding and helps power burns.</div></div></div>
-          <div class="util"><div class="icon">💿</div><div><div class="util-title">Music & Brand Content</div><div class="muted">Original music strengthens identity, engagement, and culture.</div></div></div>
-          <div class="util"><div class="icon">🖼️</div><div><div class="util-title">NFT Layer</div><div class="muted">Early phase now; expanded utility/trading may be added later.</div></div></div>
-          <div class="util"><div class="icon">🪙</div><div><div class="util-title">USDC Pairing</div><div class="muted">Paired with USDC for reduced external volatility vs. volatile base assets.</div></div></div>
-        </div>
-        <div class="callout">
-          <strong>Official hub:</strong> Access utilities and updates through the <a href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">$BAGZ App ↗</a>.
-        </div>
-      </article>
-
-      <article class="card" id="pairing">
-        <h3>4) USDC Pairing & Volatility</h3>
-        <p>
-          $BAGZ is paired with <strong>USDC</strong> to reduce external volatility from base-asset swings. This does not mean
-          “zero volatility.” $BAGZ can still move up or down based on buys/sells, liquidity depth, and market participation.
-        </p>
-        <p class="muted">
-          In short: USDC pairing keeps the reference currency stable while the market discovers price.
-        </p>
-      </article>
-
-      <article class="card" id="tokenomics">
-        <h3>5) Tokenomics</h3>
-        <p>
-          $BAGZ tokenomics are designed to support long-term sustainability, responsible supply management, and future utility growth.
-        </p>
-        <h4>Locked Tokens</h4>
-        <p>
-          <strong>100,000,000 $BAGZ tokens are locked until August 2026.</strong> This lock supports long-term project stability and aligns
-          ecosystem growth with sustainable development.
-        </p>
-        <p class="muted">
-          Additional allocation details and future lock strategy can be added as the ecosystem expands.
-        </p>
-      </article>
-
-      <article class="card" id="burns">
-        <h3>6) Monthly Burns & 30% Burn Funding</h3>
-        <p>
-          Burns happen <strong>monthly</strong>. The goal is to reduce supply over time using ecosystem-driven funding mechanics.
-        </p>
-        <ul>
-          <li>
-            <strong>30% of funds brought into the ecosystem</strong> (including merchandise, music-related initiatives, and other ecosystem activity)
-            are allocated toward <strong>buybacks and token burns</strong>.
-          </li>
-          <li><strong>Cadence:</strong> Burns are executed once per month (not weekly).</li>
-          <li><strong>Transparency:</strong> Burn proof should be posted publicly (transaction links / screenshots).</li>
-        </ul>
-        <p class="muted">Simple loop: Community activity → Revenue → Buybacks → Monthly Burns → Reduced Supply</p>
-      </article>
-
-      <article class="card" id="culture">
-        <h3>7) Brand, Music & Merchandise</h3>
-        <p>
-          $BAGZ is not only a token—it’s a brand. Music releases, merchandise, visuals, and community content strengthen cultural presence
-          and long-term engagement.
-        </p>
-        <p class="muted">
-          The culture layer supports loyalty, recognition, and real-world visibility—helping $BAGZ expand beyond charts and into a lasting identity.
-        </p>
-      </article>
-
-      <article class="card" id="nfts">
-        <h3>8) NFTs (Early Phase)</h3>
-        <p>
-          $BAGZ currently has a small NFT presence. The NFT layer may expand over time to support additional trading opportunities and future utilities.
-        </p>
-        <p class="muted">NFT plans can evolve with community demand and ecosystem growth.</p>
-      </article>
-
-      <article class="card" id="roadmap">
-        <h3>9) Roadmap</h3>
-        <ol>
-          <li><strong>Community Growth</strong> — expand holders, channels, partnerships</li>
-          <li><strong>Utility Expansion</strong> — improve staking experience and add tools</li>
-          <li><strong>Monthly Burns</strong> — consistent schedule + public proof</li>
-          <li><strong>Brand Growth</strong> — music and merchandise expansion</li>
-          <li><strong>NFT Growth</strong> — expand trading/utility over time</li>
-          <li><strong>Governance (Future)</strong> — structured community participation models</li>
-        </ol>
-      </article>
-
-      <article class="card" id="security">
-        <h3>10) Transparency</h3>
-        <p class="muted">
-          Add LP lock details, official wallets (if applicable), and where official updates are posted.
-          Transparency builds long-term trust.
-        </p>
-      </article>
-
-      <article class="card" id="access">
-        <h3>11) Official Access</h3>
-        <p>
-          The official access point for the $BAGZ ecosystem, utilities, and updates is the <strong>$BAGZ App</strong>:
-        </p>
-        <p><a class="btn btn-outline" href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">https://raccoonden.glide.page/dl/57b8f8 ↗</a></p>
-      </article>
-
-      <article class="card" id="disclaimer">
-        <h3>12) Risk Disclaimer</h3>
-        <p>
-          Crypto assets can be volatile and may lose value. This document is for informational purposes only and does not constitute
-          financial advice. Always do your own research (DYOR).
-        </p>
-      </article>
-    </section>
-
-    <section class="wrap section" id="howtobuy">
-      <h2>How to Buy</h2>
-      <p class="sub">Simple steps for new buyers.</p>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><div><div class="step-title">Get Phantom</div><div class="muted">Install Phantom wallet and fund with SOL for fees.</div></div></div>
-        <div class="step"><div class="num">2</div><div><div class="step-title">Swap USDC → $BAGZ</div><div class="muted">Use a Solana DEX to swap into $BAGZ.</div></div></div>
-        <div class="step"><div class="num">3</div><div><div class="step-title">Verify CA</div><div class="muted">Match the contract address above before buying.</div></div></div>
-      </div>
-      <div style="margin-top:16px;">
-        <a class="btn btn-primary" href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">Open $BAGZ App ↗</a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap footer-inner">
-        <div>
-          <div class="footer-title">$BAGZ • Built Different</div>
-          <div class="muted">Official hub: <a href="https://raccoonden.glide.page/dl/57b8f8" target="_blank" rel="noreferrer">$BAGZ App ↗</a></div>
-        </div>
-        <div class="muted">DYOR • Not financial advice</div>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    const copyBtn = document.getElementById('copyBtn');
-    const ca = document.getElementById('ca')?.innerText?.trim();
-    copyBtn?.addEventListener('click', async () => {
-      try{
-        await navigator.clipboard.writeText(ca);
-        copyBtn.textContent = "Copied ✅";
-        setTimeout(()=>copyBtn.textContent="Copy", 1200);
-      }catch(e){
-        copyBtn.textContent = "Copy failed";
-        setTimeout(()=>copyBtn.textContent="Copy", 1200);
-      }
-    });
-  </script>
-</body>
-</html>
+</body></html>
